@@ -2,11 +2,6 @@
 session_start();
 include "../connection/connection.php";
 
-if (!isset($_SESSION['usuario'])) {
-    header("Location: i.php");
-    exit();
-}
-
 // Busca clientes e animais para os dropdowns do modal
 $clientes = $conn->query("SELECT cliente_cpf, cliente_nome FROM cliente ORDER BY cliente_nome ASC");
 $animais = $conn->query("SELECT animal_cod, animal_nome FROM animal ORDER BY animal_nome ASC");

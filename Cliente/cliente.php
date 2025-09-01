@@ -2,10 +2,6 @@
 session_start();
 include "../connection/connection.php";
 
-if (!isset($_SESSION['usuario'])) {
-    header("Location: i.php");
-    exit();
-}
 
 // Cadastro de cliente via modal
 if (isset($_POST['add'])) {
