@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../connection/connection.php";
+include "../conexao.php";
 
 // Busca clientes e animais para os dropdowns do modal
 $clientes = $conn->query("SELECT cliente_cpf, cliente_nome FROM cliente ORDER BY cliente_nome ASC");
