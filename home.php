@@ -5,42 +5,59 @@ include "./conexao.php";
 
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Administrativo - Petshop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./Css/home.css">]
+  <meta charset="UTF-8">
+  <title>PetShop | Dashboard</title>
+  <link rel="stylesheet" href="Css/home.css">
 </head>
-
 <body>
+  <div class="navbar">
+    <div class="logo">🐾 PetShop</div>
+    <nav>
+      <ul>
+        <li><a href="home.php" class="active">Início</a></li>
+        <li><a href="Cliente/cliente.php">Clientes</a></li>
+        <li><a href="Animal/animal.php">Animais</a></li>
+        <li><a href="Agendamento/agendamento.php">Agendamentos</a></li>
+      </ul>
+    </nav>
+    <button class="logout-btn">Sair</button>
+  </div>
 
-    <div class="sidebar">
-        <div class="logo">
-            <h2>Helvetic PET</h2>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="./Cliente/cliente.php"><i class="fas fa-users"></i> Clientes</a></li>
-                <li><a href="./Animal/animal.php"><i class="fas fa-paw"></i> Animais</a></li>
-                <li><a href="./Agendamento/agendamento.php"><i class="fas fa-calendar-alt"></i> Agendamentos</a></li>
-            </ul>
-        </nav>
+  <div class="main-content">
+    <header>
+      <h1>Bem-vindo ao Painel</h1>
+      <p>Gerencie clientes, pets e agendamentos de forma simples e rápida.</p>
+    </header>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Clientes</h2>
+        <p>Gerencie todos os tutores cadastrados.</p>
+        <a href="Cliente/cliente.php" class="card-btn">Ver clientes</a>
+      </div>
+      <div class="card">
+        <h2>Animais</h2>
+        <p>Acompanhe os pets cadastrados no sistema.</p>
+        <a href="Animal/animal.php" class="card-btn">Ver animais</a>
+      </div>
+      <div class="card">
+        <h2>Agendamentos</h2>
+        <p>Veja e edite os procedimentos agendados.</p>
+        <a href="Agendamento/agendamento.php" class="card-btn">Ver agendamentos</a>
+      </div>
     </div>
 
-    <div class="main-content">
-        <header>
-            <h1>Bem-vindo</h1>
-        </header>
+    <section class="welcome">
+      <h2>Sobre o sistema</h2>
+      <p>Este sistema foi desenvolvido para facilitar a gestão do seu PetShop,
+         permitindo visualizar clientes, animais e agendamentos em um só lugar.</p>
+    </section>
+  </div>
 
-        <footer>
-            © <?= date('Y') ?> Petshop - Sistema de Administração. Todos os direitos reservados.
-        </footer>
-    </div>
-
+  <footer>
+    © 2025 PetShop - Todos os direitos reservados
+  </footer>
 </body>
-
 </html>
